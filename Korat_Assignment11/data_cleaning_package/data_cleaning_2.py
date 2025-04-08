@@ -37,6 +37,28 @@ class GrossPriceEditor:
             except (ValueError, IndexError):
                 continue  # Skip if data isn't valid
 
+    def remove_duplicates(self):
+        seen = set()
+        new_data = []
+        for row in self.data:
+            row_tuple = tuple(row)
+            if row_tuple not in seen:
+                seen.add(row_tuple)
+                new_data.append(row)
+        self.data = new_data
+    
+    def remove_pepsi_rows(self):
+        header = self.data[0]
+        filtered_data = [header]
+        for row in self.data[1:]:
+            try:
+                if row[5].strip().lower() != "pepsi":
+                    filtered_data.append(row)
+            except IndexError:
+                # If column F is missing, keep the row
+                filtered_data.append(row)
+        self.data = filtered_data
+
     def save_csv(self, output_path='fuelPurchaseData.csv'):
         with open(output_path, mode='w', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
