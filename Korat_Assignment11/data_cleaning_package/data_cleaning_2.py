@@ -1,5 +1,3 @@
-# Zach class
-
 # File Name : data_cleaning_2.py
 # Student Name: Zach Bell
 # email:  bellzj@mail.uc.edu
