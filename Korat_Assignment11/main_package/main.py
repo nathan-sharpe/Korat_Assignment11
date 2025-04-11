@@ -44,3 +44,8 @@ if __name__ == "__main__":
     cleaner = AddressCleaner(input_file, output_file, api_key)
     # Run the clean addresses method on the cleaner object
     cleaner.clean_addresses()
+
+    # Additional issues we found with the data include:
+    # Inconsistent order of address items (address, zip code, city, state, etc.)
+    # Fuel type "lng" is sometimes all cap, sometimes lowercase and sometimes spelled out as liquified natural gas
+    # Site IDs are sometimes letters and sometimes numbers

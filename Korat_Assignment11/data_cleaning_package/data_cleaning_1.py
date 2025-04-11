@@ -47,7 +47,7 @@ class AddressCleaner:
             response.raise_for_status()
             data = response.json()
             if data and 'results' in data:
-                return [item['postal_code'] for item in data['results']]
+                return [item['code'] for item in data['results']]
             return None
         except requests.exceptions.RequestException as e:
             print(f"Error during API call for zip codes near Blue Jay: {e}")
