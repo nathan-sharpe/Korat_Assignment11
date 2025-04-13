@@ -21,13 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="data_cleaning_package\data_cleaning_1.py">
+    <Compile Include="data_processing_package\api_data.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="data_cleaning_package\data_cleaning_2.py">
+    <Compile Include="data_processing_package\data_cleaning.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="data_cleaning_package\__init__.py">
+    <Compile Include="data_processing_package\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="main_package\main.py" />
@@ -36,7 +36,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="data_cleaning_package\" />
+    <Folder Include="data_processing_package\" />
     <Folder Include="main_package\" />
     <Folder Include="Data\" />
   </ItemGroup>

@@ -13,8 +13,8 @@
 
 # Anything else that's relevant: Gemini was used to create the class
 
-from data_cleaning_package.data_cleaning_2 import *
-from data_cleaning_package.data_cleaning_1 import *
+from data_processing_package.api_data import *
+from data_processing_package.data_cleaning import *
 
 if __name__ == "__main__":
     # Instantiate an object of the GrossPriceEditor class
